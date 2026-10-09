@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Συγγνώμη Λατρεία μου💜</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      font-family: system-ui, sans-serif;
+      color: #f8f3ff;
+      background: #24143b;
+    }
+
+    /* Animated background layer */
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background: linear-gradient(135deg, #24143b, #33204a 55%, #16372f);
+    }
+
+    .glow {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.48;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    .purple {
+      top: -120px;
+      left: -100px;
+      background: #9b5de5;
+    }
+
+    .green {
+      right: -100px;
+      bottom: -130px;
+      background: #38d996;
+      animation-delay: -9s;
+    }
+
+    .sparkle {
+      position: absolute;
+      bottom: -30px;
+      color: #d9c4ff;
+      opacity: 0;
+      font-size: 22px;
+      animation: rise 13s linear infinite;
+    }
+
+    .sparkle:nth-child(3) {
+      left: 16%;
+      animation-delay: 0s;
+    }
+
+    .sparkle:nth-child(4) {
+      left: 38%;
+      animation-delay: 5s;
+      color: #a8f2c9;
+    }
+
+    .sparkle:nth-child(5) {
+      left: 68%;
+      animation-delay: 2s;
+      font-size: 17px;
+    }
+
+    .sparkle:nth-child(6) {
+      left: 87%;
+      animation-delay: 7s;
+      color: #a8f2c9;
+    }
+
+    /* Apology card */
+    .card {
+      width: min(100%, 560px);
+      padding: 40px 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      background: rgba(32, 23, 48, 0.78);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+      animation: appear 0.9s ease both;
+    }
+
+    .icon {
+      font-size: 42px;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(2rem, 8vw, 3rem);
+      color: #e2caff;
+    }
+
+    p {
+      color: #e2d9eb;
+      line-height: 1.75;
+    }
+
+    .apology {
+      margin: 24px 0;
+      padding: 18px;
+      border-left: 3px solid #77d9a5;
+      border-radius: 8px;
+      background: rgba(109, 215, 157, 0.08);
+      text-align: left;
+    }
+
+    .signature {
+      margin-top: 24px;
+      color: #bcebd0;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.65;
+      }
+      85% {
+        opacity: 0.45;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes drift {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+      to {
+        transform: translate(80px, 60px) scale(1.18);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 32px 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+  </style>
+</head>
+
+<body>
+  <div class="background" aria-hidden="true">
+    <span class="glow purple"></span>
+    <span class="glow green"></span>
+    <span class="sparkle">✦</span>
+    <span class="sparkle">✧</span>
+    <span class="sparkle">✦</span>
+    <span class="sparkle">✧</span>
+  </div>
+
+  <main class="card">
+    <div class="icon" aria-hidden="true">💜</div>
+    <h1>I’m sorry</h1>
+
+    <p>
+      Ελπίζω ψυχούλα μου να με συγχωρέσεις και να με αγαπάς ακόμα.
+    </p>
+
+    <div class="apology">
+      <p>
+        Αγάπη μου συγγνώμη που δεν σε βοήθησα χθες όταν μου είπες ότι θες στηρίξει. Έπρεπε να σε είχα κάνει να νιώσεις καλυτέρα όχι χειροτέρα μετά από μια τόσο δύσκολη 	μέρα. Κάθε μέρα που ξημερώνει χαίρομαι που σε έχω στην ζωή μου και θέλω κάθε μέρα να σου δίνω πίσω την χαρά και το κουράγιο που μου δίνεις. Είσαι όλη μου η δύναμη. 
+      </p>
+
+      <p>
+        Συγγνώμη μωράκι μου, είσαι όλος μου ο κόσμος και ανυπομονώ πάρα πολύ να ξαναϊδωθούμε. Ανυπομονώ να σε ξαναπάρω στα χέρια μου και να σε κρατήσω κοντά μου.
+	<a href="CountdownForHer"> https://stefanosl2005.github.io/CountdownForHer/</a> 
+      </p>
+    </div>
+
+    <p class="signature">
+      Ο αγαπημένος σου,<br>
+      <strong>γαλαξίας σου🌌</strong>
+    </p>
+  </main>
+</body>
+</html>
